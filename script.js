@@ -155,18 +155,45 @@ document.querySelectorAll('.skill-card,.project-card,.reveal').forEach(el => {
 document.getElementById('contact-form').addEventListener('submit', function(e) {
   e.preventDefault();
   const btn = document.getElementById('submit-btn');
+  const form = this;
+  
   btn.innerHTML = '<span>Sending...</span>';
   btn.disabled = true;
-  setTimeout(() => {
-    btn.innerHTML = '<span>✓ Message Sent!</span>';
-    btn.style.background = 'linear-gradient(135deg,#22c55e,#16a34a)';
-    this.reset();
+
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: json
+  })
+  .then(async (response) => {
+    let json = await response.json();
+    if (response.status == 200) {
+      btn.innerHTML = '<span>✓ Message Sent!</span>';
+      btn.style.background = 'linear-gradient(135deg,#22c55e,#16a34a)';
+      form.reset();
+    } else {
+      console.log(response);
+      btn.innerHTML = '<span>Error! Try again.</span>';
+    }
+  })
+  .catch(error => {
+    console.log(error);
+    btn.innerHTML = '<span>Something went wrong.</span>';
+  })
+  .then(() => {
     setTimeout(() => {
       btn.innerHTML = '<span>Send Message</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>';
       btn.style.background = '';
       btn.disabled = false;
-    }, 3000);
-  }, 1200);
+    }, 4000);
+  });
 });
 
 // ── SMOOTH SCROLL ──
