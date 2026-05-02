@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Umang Agrawal | AI Engineer & 3D Web Developer</title>
+  <meta name="description" content="Portfolio of Umang Agrawal — Final-year CS student specializing in deep learning, image forgery detection, and immersive 3D web experiences with React & Three.js." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── CURSOR ── -->
+  <div id="cursor"></div>
+  <div id="cursor-follower"></div>
+
+  <!-- ── NAVBAR ── -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>UA<span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li><a href="https://github.com/UmangAgrwl213" target="_blank" class="nav-link">GitHub</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Let's Talk</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <canvas id="particles-canvas"></canvas>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for Opportunities
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line">Umang</span>
+        <span class="title-line gradient-text">Agrawal</span>
+      </h1>
+      <div class="hero-roles">
+        <span class="role-prefix">I build &nbsp;</span>
+        <span class="typed-text" id="typed"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-description">
+        Final-year CS student at DIT University crafting AI-powered systems and 
+        immersive 3D web experiences. Turning complex algorithms into delightful interfaces.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          <span>View My Work</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">3+</span>
+          <span class="stat-label">Years Coding</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">∞</span>
+          <span class="stat-label">Curiosity</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-indicator">
+        <div class="scroll-dot"></div>
+      </div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="avatar-container">
+            <div class="avatar-ring"></div>
+            <div class="avatar-ring ring-2"></div>
+            <div class="avatar-inner">
+              <div class="avatar-initials">UA</div>
+              <div class="avatar-glow"></div>
+            </div>
+            <div class="avatar-badge badge-ml">🧠 ML</div>
+            <div class="avatar-badge badge-3d">🌐 3D</div>
+            <div class="avatar-badge badge-react">⚛️ React</div>
+          </div>
+        </div>
+        <div class="about-content">
+          <p class="about-lead">
+            I'm a passionate developer at the intersection of <strong>Artificial Intelligence</strong> and 
+            <strong>immersive web experiences</strong>.
+          </p>
+          <p class="about-text">
+            Currently in my final year at DIT University, I specialize in building deep learning models 
+            for real-world problems — most notably a <em>ResNet34-UNet hybrid</em> for image forgery 
+            detection using ELA and forensic analysis techniques.
+          </p>
+          <p class="about-text">
+            On the creative side, I push the boundaries of the web with React and Three.js, crafting 
+            premium 3D experiences — from Porsche showrooms to interactive product landing pages — 
+            that blur the line between web and reality.
+          </p>
+          <div class="about-info">
+            <div class="info-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Dehradun, India</span>
+            </div>
+            <div class="info-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              <span>DIT University (B.Tech CSE)</span>
+            </div>
+            <div class="info-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              <span>Open to Full-time & Internship roles</span>
+            </div>
+          </div>
+          <div class="about-links">
+            <a href="https://www.linkedin.com/in/umang-agrawal214/" target="_blank" class="social-link" id="linkedin-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/UmangAgrwl213" target="_blank" class="social-link" id="github-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Expertise</span>
+        <h2 class="section-title">Skills & <span class="gradient-text">Technologies</span></h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card" data-delay="0">
+          <div class="skill-card-icon">🧠</div>
+          <h3>Deep Learning & AI</h3>
+          <div class="skill-tags">
+            <span class="tag">PyTorch</span>
+            <span class="tag">ResNet</span>
+            <span class="tag">UNet</span>
+            <span class="tag">CNN</span>
+            <span class="tag">ELA Forensics</span>
+            <span class="tag">Focal Loss</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" style="--w:88%"></div>
+          </div>
+        </div>
+
+        <div class="skill-card" data-delay="100">
+          <div class="skill-card-icon">🌐</div>
+          <h3>3D Web Development</h3>
+          <div class="skill-tags">
+            <span class="tag">Three.js</span>
+            <span class="tag">React Three Fiber</span>
+            <span class="tag">GSAP</span>
+            <span class="tag">WebGL</span>
+            <span class="tag">Shader</span>
+            <span class="tag">Blender</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" style="--w:92%"></div>
+          </div>
+        </div>
+
+        <div class="skill-card" data-delay="200">
+          <div class="skill-card-icon">⚛️</div>
+          <h3>Frontend Engineering</h3>
+          <div class="skill-tags">
+            <span class="tag">React</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Vite</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">Framer Motion</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" style="--w:90%"></div>
+          </div>
+        </div>
+
+        <div class="skill-card" data-delay="300">
+          <div class="skill-card-icon">🔧</div>
+          <h3>Backend & Tools</h3>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Git</span>
+            <span class="tag">Docker</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">MongoDB</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" style="--w:80%"></div>
+          </div>
+        </div>
+
+        <div class="skill-card" data-delay="400">
+          <div class="skill-card-icon">📊</div>
+          <h3>Data & Analysis</h3>
+          <div class="skill-tags">
+            <span class="tag">NumPy</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">Matplotlib</span>
+            <span class="tag">Scikit-learn</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" style="--w:85%"></div>
+          </div>
+        </div>
+
+        <div class="skill-card" data-delay="500">
+          <div class="skill-card-icon">🚀</div>
+          <h3>DevOps & Deployment</h3>
+          <div class="skill-tags">
+            <span class="tag">Cloud Run</span>
+            <span class="tag">Vercel</span>
+            <span class="tag">GitHub Actions</span>
+            <span class="tag">Linux</span>
+            <span class="tag">Nginx</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" style="--w:72%"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card featured" id="proj-forgery">
+          <div class="project-visual">
+            <img src="assets/forgery.png" alt="Forgery Detection Visualization" class="project-img">
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="ptag ai">Deep Learning</span>
+              <span class="ptag">PyTorch</span>
+              <span class="ptag">Computer Vision</span>
+            </div>
+            <h3>Image Forgery Detection</h3>
+            <p>Capstone project — a hybrid ResNet34-UNet architecture trained on CASIA v2 dataset. 
+            Uses Error Level Analysis (ELA) forensics + multi-scale feature extraction to localize 
+            forged regions with pixel-level precision. Includes Focal Loss for class imbalance.</p>
+            <div class="project-metrics">
+              <div class="metric"><span class="m-val">~94%</span><span class="m-key">Accuracy</span></div>
+              <div class="metric"><span class="m-val">CASIA v2</span><span class="m-key">Dataset</span></div>
+              <div class="metric"><span class="m-val">ResNet34</span><span class="m-key">Backbone</span></div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/UmangAgrwl213" target="_blank" class="plink plink-primary" id="forgery-github">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" id="proj-redbull">
+          <div class="project-visual">
+            <img src="assets/redbull.png" alt="Red Bull 3D Project" class="project-img">
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="ptag three">Three.js</span>
+              <span class="ptag">React</span>
+              <span class="ptag">GSAP</span>
+            </div>
+            <h3>Red Bull 3D Landing Page</h3>
+            <p>An immersive premium product landing page with interactive 3D can model, 
+            flavor picker with dynamic scene transitions, and cinematic animations using 
+            React Three Fiber + GSAP ScrollTrigger.</p>
+            <div class="project-links">
+              <a href="https://github.com/UmangAgrwl213" target="_blank" class="plink plink-primary" id="redbull-github">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+        <p class="section-subtitle">
+          Open to internships, full-time roles, freelance projects, and collaborations. 
+          Let's build something incredible together.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-card" id="contact-email">
+            <div class="contact-icon">📧</div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:umangagrawal213@gmail.com">umangagrawal213@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-card" id="contact-linkedin">
+            <div class="contact-icon">💼</div>
+            <div>
+              <h4>LinkedIn</h4>
+              <a href="https://www.linkedin.com/in/umang-agrawal214/" target="_blank">umang-agrawal214</a>
+            </div>
+          </div>
+          <div class="contact-card" id="contact-location">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Location</h4>
+              <span>Dehradun, India</span>
+            </div>
+          </div>
+          <div class="availability-badge">
+            <div class="avail-dot"></div>
+            <span>Available for opportunities starting June 2026</span>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="What's this about?" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Tell me about your project or opportunity..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+            <span>Send Message</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>UA<span class="logo-bracket">/&gt;</span>
+        </div>
+        <p class="footer-copy">
+          Designed & built by <strong>Umang Agrawal</strong> · 2026
+        </p>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/umang-agrawal214/" target="_blank" id="footer-linkedin">LinkedIn</a>
+          <a href="https://github.com/UmangAgrwl213" target="_blank" id="footer-github">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
