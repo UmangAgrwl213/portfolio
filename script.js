@@ -1,3 +1,9 @@
+// ── VERCEL SPEED INSIGHTS ──
+import { injectSpeedInsights } from '@vercel/speed-insights';
+
+// Initialize Speed Insights
+injectSpeedInsights();
+
 // ── CUSTOM CURSOR ──
 const cursor = document.getElementById('cursor');
 const follower = document.getElementById('cursor-follower');
