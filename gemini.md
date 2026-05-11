@@ -1,29 +1,29 @@
 # 🚀 Project: Immersive Professional Portfolio V2
 **Owner:** Umang Agrawal
-**Status:** Live & Deployed
-**Tech Stack:** HTML5, CSS3 (Vanilla), JavaScript (ES6+), GSAP (planned), Three.js (planned)
+**Status:** Redesigned & Modernized (May 2026)
+**Tech Stack:** React 19, Vite, Tailwind CSS v4, Three.js, Framer Motion
 
 ---
 
 ## 💎 Design Philosophy
-The portfolio is designed with a **Premium Dark Aesthetic**, utilizing:
-- **Glassmorphism**: Subtle translucent backgrounds for cards and navigation.
-- **Dynamic Interaction**: Custom cursor with a smooth follower, interactive particles, and hover scaling.
-- **Visual Excellence**: High-fidelity project images and a curated color palette (`#7c3aed` Violet to `#06b6d4` Cyan).
+The portfolio features a **Minimalist Architectural Aesthetic**, utilizing:
+- **Ivory & Charcoal Palette**: A premium, high-contrast look (`#F2F0EB` background).
+- **3D Distorted Core**: An interactive Three.js wireframe sphere representing AI complexity.
+- **Micro-Animations**: Smooth transitions powered by Framer Motion.
 
 ---
 
 ## 🛠️ Technical Architecture
 
 ### 1. Frontend Core
-- **Semantic HTML**: Optimized for SEO and accessibility.
-- **Custom CSS Engine**: Built with CSS variables for easy theming and consistent spacing.
-- **Responsive Grid**: Fluid layout that adapts from ultra-wide monitors to mobile devices.
+- **React 19 & Vite**: High-performance development and build pipeline.
+- **Tailwind CSS v4**: Modern utility-first styling with the new JIT engine.
+- **TypeScript**: Type-safe architecture for robustness.
 
 ### 2. Interactive Features
-- **Custom Cursor**: A two-part cursor system (dot + follower) that reacts to interactive elements.
-- **Particle System**: A lightweight canvas-based particle engine for the hero background.
-- **Smooth Navigation**: Intercepted scroll behavior for seamless section transitions.
+- **Three.js (R3F)**: Immersive 3D background with a custom distorted wireframe core.
+- **Custom Cursor**: A two-part reactive cursor system (dot + follower).
+- **Framer Motion**: Choreographed entrance animations and interactive hover states.
 
 ---
 
