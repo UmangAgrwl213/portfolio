@@ -37,10 +37,10 @@ export default function About() {
           <h2 className="text-[10px] uppercase tracking-widest font-bold opacity-30 italic mb-4 text-accent">01. About Me</h2>
           <h3 className="text-5xl font-serif italic mb-6 text-white">Merging AI <br/>with Interaction</h3>
           <p className="text-white/60 text-lg font-light leading-relaxed mb-6">
-            I am Umang Agrawal, a passionate developer at the intersection of Artificial Intelligence and immersive web experiences. Currently in my final year at DIT University, I specialize in building deep learning models for forensic analysis.
+            I am Umang Agrawal, a passionate developer at the intersection of Artificial Intelligence, Blockchain, and immersive web experiences. Currently in my final year at DIT University, I specialize in building robust systems—from deep learning models for forgery detection to decentralized supply chain trackers.
           </p>
           <p className="text-white/60 text-lg font-light leading-relaxed">
-            My most notable work includes a hybrid ResNet34-UNet architecture for image forgery detection. On the creative side, I push the boundaries of the web with React and Three.js, crafting premium 3D experiences that blur the line between web and reality.
+            My notable work includes **MedMinder**, an Android medical reminder suite, and a hybrid ResNet34-UNet architecture for AI forensics. I am currently mastering Java and DSA while crafting premium 3D experiences with Three.js that blur the line between web and reality.
           </p>
         </motion.div>
 

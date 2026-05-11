@@ -51,10 +51,10 @@ export default function Skills() {
         className="mt-20 pt-10 border-t border-white/5 grid grid-cols-2 md:grid-cols-4 gap-8"
       >
          {[
-           { label: "Frameworks", items: ["PyTorch", "React", "Next.js", "GSAP"] },
-           { label: "Data & ML", items: ["Pandas", "Scikit-Learn", "OpenCV", "NumPy"] },
-           { label: "Tools", items: ["Three.js", "Vite", "Git", "Framer Motion"] },
-           { label: "Deployment", items: ["Vercel", "Cloud Run", "Docker", "Linux"] },
+           { label: "Core & Algorithms", items: ["Java", "DSA", "Python", "Problem Solving"] },
+           { label: "AI & Data", items: ["PyTorch", "OpenCV", "Scikit-Learn", "Computer Vision"] },
+           { label: "Web & 3D", items: ["Three.js", "React", "Next.js", "GSAP"] },
+           { label: "Tools & DevOps", items: ["Docker", "Maven", "MySQL", "Git"] },
          ].map((category, i) => (
             <div key={i}>
                 <h4 className="text-[10px] uppercase tracking-widest font-bold text-accent italic mb-4 opacity-30">{category.label}</h4>
